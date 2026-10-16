@@ -217,11 +217,25 @@ graph TD
 ```
 
 ## 3. Path Cost Function & Optimal Path Determination
-#### A. Distance Breakdown by Road Segment
-#### B. Route Path Cost Evaluation
-#### C. Optimal Path Conclusion
+#### A. Path Cost Evaluation
+**Cost (**$g(n)$**):** The physical distance in kilometres between towns.
 
+* Our team used the Google Maps search feature to find the exact driving distance for each edge in the graph as indicated by the edge labels displaying distance in kilometres between towns.
 
+#### B. Optimal Path Conclusion
+Since we are looking for the *optimal* path based on distance along roads alone, we implemented the routing agent using **Uniform Cost Search (UCS)**
+
+**Execution Steps:**
+1. Initialize a priority queue (frontier) with the starting node (Nairobi).
+
+2. Expand nodes by checking adjacent towns.
+
+3. Add the exact distance from Google Maps to the total path cost.
+
+4. Continue expanding the lowest-cost path until the Kisumu node is reached and extracted from the frontier.
+
+5. Compare standard routes mathematically using the accumulated distance to prove optimality.
+   
 ## 4. Group Work Evidence
 ### Meeting Minutes
 - **Date**: 07/10/2026
